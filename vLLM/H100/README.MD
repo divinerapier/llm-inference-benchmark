@@ -21,7 +21,14 @@ pip install vllm
 git clone https://github.com/vllm-project/vllm.git
 cd vllm/benchmarks/
 
-python benchmark_latency.py --batch-size=32 --tensor-parallel-size=1 --input-len=32--output-len=32 --model="meta-llama/Llama-2-7b-hf" --dtype="float16" --trust-remote-code
+python benchmark_latency.py \
+    --batch-size=32 \
+    --tensor-parallel-size=1 \
+    --input-len=32 \
+    --output-len=32 \
+    --model="meta-llama/Llama-3.1-8B" \
+    --dtype="float16" \
+    --trust-remote-code
 ```
 
 ## Run Benchmarks 
