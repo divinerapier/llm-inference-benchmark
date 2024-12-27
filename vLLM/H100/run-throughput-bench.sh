@@ -26,8 +26,8 @@ models=(
 dtypes=(
     "float16"
     "bfloat16"
-    "float"
-    "float32"
+    # "float"
+    # "float32"
 )
 
 for model in "${models[@]}"; do
@@ -38,7 +38,7 @@ for model in "${models[@]}"; do
                     python3 benchmark_throughput.py \
                         --use-v2-block-manager \
                         --device cuda \
-                        --model=$model_name \
+                        --model=$model \
                         --tensor-parallel-size=$tensor_parallel \
                         --input-len=$input_output_length \
                         --output-len=$input_output_length \

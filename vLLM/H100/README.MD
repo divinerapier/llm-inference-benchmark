@@ -5,14 +5,7 @@ We utilized H100 GPU systems at JLSE testbeds at ALCF.
 ## First time Setup
 
 ```bash
-
-module load cuda/12.3.0
-source ~/.init_conda_x86.sh
-conda create -n vllm python=3.10
-conda activate vllm
-
 pip install vllm
-
 ```
 
 ## Running a test Experiment 
@@ -34,6 +27,11 @@ python benchmark_latency.py \
 ## Run Benchmarks 
 
 1. Use `benchmark_throughput.py` script provided here to collect throughput measurements in the respective `csv` file. 
+
+``` bash
+bash ./run-throughput-bench.sh
+```
+
 2. Use `benchmark_power.py` script provided here to collect power measurements in the respective `csv` file. 
     > You will need `power_utils.py` file for power metric collectring in the same direcotry as the `benchmark_power.py`
 
